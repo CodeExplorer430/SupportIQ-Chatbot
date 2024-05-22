@@ -1,0 +1,300 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
+}
+
+.nav {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav,
+.nav_item {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_logo,
+.nav_link,
+.button {
+    color: #fff;
+}
+
+.nav_logo {
+    font-size: 25px;
+}
+
+.nav_item {
+    column-gap: 25px;
+}
+
+.nav_link:hover {
+    color: #d9d9d9;
+}
+
+.button {
+    padding: 6px 24px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Home */
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out;
+}
+
+.home.show::before {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Developer Section */
+.developer {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.developer .col-md-4 {
+    margin-bottom: 30px;
+}
+
+.developer .col-md-4 h3 {
+    margin-top: 15px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer h5 {
+    margin-bottom: 15px;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.team .row {
+    display: flex;
+    justify-content: center;
+}
+
+.team-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.testimonial {
+    margin-bottom: 20px;
+}
+
+/* Support Section */
+.support {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Legal Information Section */
+.legal {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Modal custom styles */
+.modal-header {
+    background-color: #302ae8;
+    color: #fff;
+}
+
+.modal-body .form-group {
+    margin-bottom: 20px;
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+}
+
+.input-group-prepend .input-group-text {
+    border-right: 0;
+}
+
+.form-control {
+    border-left: 0;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+}
+
+/* Additional Styles */
+header {
+    padding: 60px 0;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #0A21C0;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.card-header {
+    background-color: #0A21C0;
+    color: #141619;
+    padding: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.btn-primary {
+    background-color: #0A21C0;
+    border-color: #0A21C0;
+}
+
+.btn-primary:hover {
+    background-color: #050A44;
+    border-color: #050A44;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #B3B4BD;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #B3B4BD;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    color: #141619;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #0A21C0;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #050A44;
+}
+
+p {
+    margin-top: 20px;
+}
+
+a {
+    color: #0A21C0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}

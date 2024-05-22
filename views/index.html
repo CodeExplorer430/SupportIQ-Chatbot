@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupportIQ - Customer Support Chatbot</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="../assets/logo.png" alt="SupportIQ Logo" style="width: 30px; height: 30px;">
+        SupportIQ
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#use-cases">Use Cases</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#support">Support</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#legal">Legal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about-us">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-primary" id="form-open" data-toggle="modal" data-target="#loginModal">Login</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Header Section -->
+    <header class="text-center text-white" style="background: #050A44; padding: 100px 0;">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">Welcome to Our Customer Support Chatbot</h1>
+            <p class="lead animate__animated animate__fadeInUp">Get assistance anytime, anywhere!</p>
+            <a href="#contact" class="btn btn-primary btn-lg animate__animated animate__fadeInUp">Get Started</a>
+        </div>
+    </header>
+
+    <!--Hero Section-->
+    <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://videos.pexels.com/video-files/15940565/15940565-hd_1920_1080_60fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    
+    <!-- Features Section -->
+    <section id="features" class="features py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-comments fa-3x mb-3 text-primary"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Our chatbot is available round the clock to assist you with your queries.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-bolt fa-3x mb-3 text-primary"></i>
+                    <h3>Instant Responses</h3>
+                    <p>Get instant responses to your questions with our AI-powered chatbot.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-lock fa-3x mb-3 text-primary"></i>
+                    <h3>Secure</h3>
+                    <p>We prioritize your privacy and ensure secure communication at all times.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-chart-line fa-3x mb-3 text-primary"></i>
+                    <h3>Analytics & Reporting</h3>
+                    <p>Track and analyze customer interactions to improve your support services.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-cogs fa-3x mb-3 text-primary"></i>
+                    <h3>Customizable</h3>
+                    <p>Tailor the chatbot to match your brand's voice and meet your specific needs.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-sync-alt fa-3x mb-3 text-primary"></i>
+                    <h3>Seamless Integration</h3>
+                    <p>Easily integrate the chatbot with your existing systems and platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section class="developer">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Our Developers</h2>
+                <p class="lead">Meet the creators behind SupportIQ</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-robot fa-3x mb-3 text-primary"></i>
+                    <h3>Miguel Harvey N. Velasco</h3>
+                    <p>AI enthusiast with a knack for natural language processing, Miguel is dedicated to creating intuitive chatbot interactions.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-server fa-3x mb-3 text-primary"></i>
+                    <h3>Philip Mathew G. Bobis</h3>
+                    <p>Passionate about backend development, Philip ensures our chatbot solutions are robust and scalable.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-mobile-alt fa-3x mb-3 text-primary"></i>
+                    <h3>Lawrence F. Baylon</h3>
+                    <p>Specializing in mobile integration, Lawrence focuses on enhancing chatbot interfaces across various platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Use Cases Section -->
+<section id="use-cases" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2>Use Cases</h2>
+            <p class="lead">See how our chatbot can be used in different industries</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <i class="fas fa-shopping-cart fa-3x mb-3 text-primary"></i>
+                <h4>E-commerce</h4>
+                <p>Improve customer experience with instant support and order tracking.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-university fa-3x mb-3 text-primary"></i>
+                <h4>Banking</h4>
+                <p>Assist customers with account information and transaction details securely.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-heartbeat fa-3x mb-3 text-primary"></i>
+                <h4>Healthcare</h4>
+                <p>Provide patients with appointment scheduling and medical information.</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4 text-center">
+                <i class="fas fa-graduation-cap fa-3x mb-3 text-primary"></i>
+                <h4>Education</h4>
+                <p>Support students with course information, schedules, and academic resources.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-plane fa-3x mb-3 text-primary"></i>
+                <h4>Travel</h4>
+                <p>Assist travelers with booking, itinerary changes, and travel information.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-headphones fa-3x mb-3 text-primary"></i>
+                <h4>Technology</h4>
+                <p>Provide technical support and troubleshooting for software and hardware products.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Pricing Plans</h2>
+                <p class="lead">Choose a plan that fits your needs</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Basic</h4>
+                        </div>
+                        <div class="card-body">
+                            <h3>$19/month</h3>
+                            <p>Basic support features</p>
+                            <p>Email support</p>
+                            <p>Access to community forums</p>
+                            <a href="#contact" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Pro</h4>
+                        </div>
+                        <div class="card-body">
+                            <h3>$49/month</h3>
+                            <ul>
+                                <p>Advanced support features</p>
+                                <p>Priority email support</p>
+                                <p>Analytics and reporting</p>
+                                <p>Customizable chatbot responses</p>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Enterprise</h4>
+                        </div>
+                        <div class="card-body">
+                            <h3>Contact Us</h3>
+                            <p>Customized solutions for large businesses</p>
+                            <p>Dedicated account manager</p>
+                            <p>24/7 support</p>
+                            <p>Integration with existing systems</p>
+                            <a href="#contact" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">What Our Users Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p>"SupportIQ has transformed our customer service experience. The chatbot is quick, efficient, and has significantly reduced our response time."</p>
+                        <p><strong>John Doe</strong>, CEO of Acme Corp</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p>"Integrating SupportIQ was a breeze. Our customers love the instant responses and the seamless interaction with our support team."</p>
+                        <p><strong>Jane Smith</strong>, Customer Service Manager at Beta Inc.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p>"The analytics feature of SupportIQ has provided us with valuable insights into our customer interactions. It's a game changer for our business."</p>
+                        <p><strong>Michael Johnson</strong>, Head of Support at Gamma Solutions</p>
+                    </div>
+                </div>
+                <!-- Additional dummy testimonials -->
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p>"Our support team's productivity has doubled since we started using SupportIQ. The bot handles routine queries, freeing up our agents for more complex issues."</p>
+                        <p><strong>Emily Davis</strong>, CTO of Delta Enterprises</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p>"SupportIQ's multilingual support has enabled us to provide better service to our global customer base. It's an invaluable tool."</p>
+                        <p><strong>Daniel Brown</strong>, Global Support Lead at Epsilon Co.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p>"We were able to customize SupportIQ to fit our unique needs perfectly. The customer support team was incredibly helpful during the setup process."</p>
+                        <p><strong>Laura Wilson</strong>, Operations Manager at Zeta Tech</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--About us Section-->
+    <section id="about-us" class="py-5">
+        <div class="container text-center">
+            <h2>About Us</h2>
+            <p class="lead">At SupportIQ, we are dedicated to revolutionizing customer support through advanced AI-driven chatbot solutions. Our mission is to provide seamless, efficient, and personalized customer service experiences that empower businesses and satisfy customers.</p>
+            <p>Founded with a vision to innovate the customer support industry, SupportIQ combines cutting-edge technology with a deep understanding of customer needs. Our team of passionate professionals is committed to excellence and continuous improvement.</p>
+            <div class="team">
+                <h3>Our Values</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <i class="fas fa-lightbulb fa-3x mb-3 text-primary"></i>
+                        <h4>Innovation</h4>
+                        <p>We constantly seek out new ideas and technologies to improve our solutions and stay ahead in the industry.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-users fa-3x mb-3 text-primary"></i>
+                        <h4>Customer Focus</h4>
+                        <p>Our customers are at the heart of everything we do. We strive to exceed their expectations with every interaction.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-cogs fa-3x mb-3 text-primary"></i>
+                        <h4>Excellence</h4>
+                        <p>We are committed to delivering high-quality solutions and exceptional service in every project we undertake.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="team mt-5">
+                <h3>Meet Our Team</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="../assets/developer1.jpg" alt="Developer 1" class="team-img mb-3">
+                        <h4>Miguel Harvey N. Velasco</h4>
+                        <p>Expert in AI and natural language processing, focusing on creating intuitive chatbot interactions.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="../assets/developer2.jpg" alt="Developer 2" class="team-img mb-3">
+                        <h4>Philip Mathew G. Bobis</h4>
+                        <p>Specialist in chatbot backend development, ensuring robust and scalable support solutions.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="../assets/developer3.jpg" alt="Developer 3" class="team-img mb-3">
+                        <h4>Lawrence F. Baylon</h4>
+                        <p>Focuses on integrating chatbots with various platforms, enhancing mobile and web user interfaces.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Support</h2>
+            <p class="lead">We are here to help you with any questions or issues you may have.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="fas fa-question-circle fa-3x mb-3 text-primary"></i>
+                    <h4>Help Center</h4>
+                    <p>Find guides, troubleshooting tips, and FAQs to get the most out of SupportIQ.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-headset fa-3x mb-3 text-primary"></i>
+                    <h4>Contact Support</h4>
+                    <p>Reach out to our support team for personalized assistance via email or live chat.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-tools fa-3x mb-3 text-primary"></i>
+                    <h4>Technical Support</h4>
+                    <p>Get help with technical issues and learn how to integrate our chatbot with your systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Information Section -->
+    <section id="legal" class="py-5">
+        <div class="container text-center">
+            <h2>Legal Information</h2>
+            <p class="lead">Learn about our privacy policies and terms of service.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fas fa-file-alt fa-3x mb-3 text-primary"></i>
+                    <h4>Privacy Policy</h4>
+                    <p>Understand how we collect, use, and protect your personal information.</p>
+                </div>
+                <div class="col-md-6">
+                    <i class="fas fa-file-contract fa-3x mb-3 text-primary"></i>
+                    <h4>Terms of Service</h4>
+                    <p>Read the terms and conditions that govern the use of our services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Contact Section -->
+     <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Contact Us</h2>
+                <p class="lead">We'd love to hear from you</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm" method="POST" action="../php/login.php">
+                        <div class="form-group">
+                            <label for="loginEmail">Email address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="email" class="form-control" id="loginEmail" name="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control" id="loginPassword" name="password" placeholder="Enter your password" required>
+                            </div>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Login Now</button>
+                        <p class="text-center mt-3">Don't have an account? <a href="#" id="showSignup" data-toggle="modal" data-target="#signupModal" data-dismiss="modal">Signup</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Signup</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm" method="POST" action="../php/register.php">
+                        <div class="form-group">
+                            <label for="signupEmail">Email address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="email" class="form-control" id="signupEmail" name="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control" id="signupPassword" name="password" placeholder="Create a password" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirm_password" placeholder="Confirm your password" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                        <p class="text-center mt-3">Already have an account? <a href="#" id="showLogin" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Learn more about our company history, mission, and values.</p>
+                    <a href="#about-us" class="text-white">Read more</a>
+                </div>
+                <div class="col-md-4">
+                    <h5>Support</h5>
+                    <p>Visit our help center for guides, troubleshooting tips, and contact options.</p>
+                    <a href="#support" class="text-white">Get support</a>
+                </div>
+                <div class="col-md-4">
+                    <h5>Legal Information</h5>
+                    <p>Read our privacy policy and terms of service.</p>
+                    <a href="#legal" class="text-white">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mt-3">
+            <p>&copy; 2024 SupportIQ. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

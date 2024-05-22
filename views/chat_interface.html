@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        .chat-container {
+            margin-top: 20px;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .chat-box {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            overflow-y: auto;
+            flex-grow: 1;
+            margin-bottom: 15px;
+        }
+        .chat-message {
+            margin-bottom: 10px;
+        }
+        .chat-message.user {
+            text-align: right;
+        }
+        .chat-message.bot {
+            text-align: left;
+        }
+        .input-container {
+            display: flex;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+        #user-input {
+            flex-grow: 1;
+            border: none;
+            padding: 10px;
+            border-radius: 5px 0 0 5px;
+        }
+        #user-input:focus {
+            outline: none;
+        }
+        button {
+            border: none;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="../assets/logo.png" alt="SupportIQ Logo" style="width: 30px; height: 30px;">
+            SupportIQ
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../views/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../php/logout.php">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container chat-container">
+        <div class="chat-box" id="chat-box">
+            <!-- Chat messages will be appended here -->
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+         function sendMessage() {
+            const userInput = document.getElementById('user-input');
+            const message = userInput.value;
+            if (message.trim() !== '') {
+                const chatBox = document.getElementById('chat-box');
+                const userMessage = `<div class="chat-message user animate__animated animate__fadeInRight"><strong>You:</strong> ${message}</div>`;
+                chatBox.innerHTML += userMessage;
+                userInput.value = '';
+                chatBox.scrollTop = chatBox.scrollHeight;
+
+                $.ajax({
+                    url: '../php/requestManager.php',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ message: message }),
+                    success: function(response) {
+                        const botMessage = `<div class="chat-message bot animate__animated animate__fadeInLeft"><strong>Bot:</strong> ${response.response}</div>`;
+                        chatBox.innerHTML += botMessage;
+                        chatBox.scrollTop = chatBox.scrollHeight;
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        const errorMessage = `<div class="chat-message bot animate__animated animate__fadeInLeft"><strong>Bot:</strong> Error: ${textStatus}, ${errorThrown}</div>`;
+                        chatBox.innerHTML += errorMessage;
+                        chatBox.scrollTop = chatBox.scrollHeight;
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
