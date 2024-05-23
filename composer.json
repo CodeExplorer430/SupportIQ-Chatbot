@@ -1,5 +1,10 @@
 {
     "require": {
-        "guzzlehttp/guzzle": "^7.8"
+        "lucianotonet/groq-php": "^0.0.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "LucianoTonet\\Groq\\": "vendor/lucianotonet/groq-php/src/"
+        }
     }
 }

@@ -89,10 +89,10 @@
             <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script>
-         function sendMessage() {
+        function sendMessage() {
             const userInput = document.getElementById('user-input');
             const message = userInput.value;
             if (message.trim() !== '') {
@@ -101,14 +101,14 @@
                 chatBox.innerHTML += userMessage;
                 userInput.value = '';
                 chatBox.scrollTop = chatBox.scrollHeight;
-
+    
                 $.ajax({
-                    url: '../php/requestManager.php',
+                    url: '../php/web.php',
                     type: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify({ message: message }),
                     success: function(response) {
-                        const botMessage = `<div class="chat-message bot animate__animated animate__fadeInLeft"><strong>Bot:</strong> ${response.response}</div>`;
+                        const botMessage = `<div class="chat-message bot animate__animated animate__fadeInLeft"><strong>Bot:</strong> ${response}</div>`;
                         chatBox.innerHTML += botMessage;
                         chatBox.scrollTop = chatBox.scrollHeight;
                     },
@@ -120,6 +120,6 @@
                 });
             }
         }
-    </script>
+    </script>    
 </body>
 </html>
