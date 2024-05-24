@@ -12,7 +12,8 @@ class ChatBot
 
     public function __construct()
     {
-        $this->authorization = 'sk-proj-nKEO8BiTSd65VK8n0wHGT3BlbkFJ2pubxuzFt4LUWxmrxTht'; // Replace with your actual OpenAI API key
+        // For security purposes I've removed the API key that I have used for the testing and development of the chatbot
+        $this->authorization = 'YOUR_API_KEY'; // Replace with your actual OpenAI API key
         $this->endpoint = 'https://api.openai.com/v1';
         $this->assistantId = $this->createAssistant();
         $this->threadId = $this->createThread();
